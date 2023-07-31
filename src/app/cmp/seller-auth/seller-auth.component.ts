@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { SignUp } from 'src/app/dataTypes';
+import { SellerService } from 'src/app/services/seller.service';
 
 @Component({
   selector: 'yagu-seller-auth',
@@ -7,10 +10,18 @@ import { Component } from '@angular/core';
 })
 export class SellerAuthComponent {
 
+  constructor(private sellerService:SellerService, private router : Router){}
   ngOnInit(){
 
   }
-  signUp(data : object):void{
-    console.warn(data);
+  signUp(data : SignUp):void{
+    this.sellerService.userSignup(data).subscribe(
+      (result)=>{
+        // console.log(result);
+        if(result){
+          this.router.navigate(['seller-home']);
+        }
+      }
+    );
   }
 }
