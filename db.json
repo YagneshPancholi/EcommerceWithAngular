@@ -5,30 +5,6 @@
       "email": "yagnesh@gmail.com",
       "password": "yagu@123",
       "id": 1
-    },
-    {
-      "name": "dharti",
-      "email": "dharti@gmail.com",
-      "password": "dharti@1998",
-      "id": 2
-    },
-    {
-      "name": "Vihan",
-      "email": "Vihan@hotmail.com",
-      "password": "Vihan@123",
-      "id": 3
-    },
-    {
-      "name": "Vriha",
-      "email": "Vriha@hotmail.com",
-      "password": "vriha@123",
-      "id": 4
-    },
-    {
-      "name": "Batman",
-      "email": "bruce@wayne.com",
-      "password": "batman@123",
-      "id": 5
     }
   ]
 }

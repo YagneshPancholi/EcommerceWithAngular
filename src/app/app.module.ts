@@ -9,6 +9,7 @@ import { SellerAuthComponent } from './cmp/seller-auth/seller-auth.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './cmp/seller-home/seller-home.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,15 +17,16 @@ import { SellerHomeComponent } from './cmp/seller-home/seller-home.component';
     HeaderComponent,
     HomeComponent,
     SellerAuthComponent,
-    SellerHomeComponent
+    SellerHomeComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
