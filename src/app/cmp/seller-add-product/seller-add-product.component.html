@@ -1,8 +1,11 @@
 <div class="add-product">
   <h1>Add New Product</h1>
+  <p *ngIf="addProductMessage != undefined" class="p-message">
+    {{ addProductMessage }}
+  </p>
   <form
     #addProduct="ngForm"
-    (ngSubmit)="submit(addProduct.value)"
+    (ngSubmit)="addProducts(addProduct.value)"
     class="common-form"
   >
     <input

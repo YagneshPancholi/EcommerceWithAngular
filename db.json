@@ -6,5 +6,79 @@
       "password": "yagu@123",
       "id": 1
     }
+  ],
+  "products": [
+    {
+      "name": "Iphone 11",
+      "price": "50000",
+      "category": "mobiles",
+      "color": "red",
+      "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/34edebd3-ba85-41b7-ba24-9c14ce7b440c.jpg",
+      "description": "Iphone 11 red with 128 GB Storage",
+      "id": 1
+    },
+    {
+      "name": "Impact Whey Protein",
+      "price": "4199",
+      "color": "Red",
+      "category": "Food",
+      "description": "Helps To gain muscle",
+      "image": "https://static.thcdn.com/productimg/300/300/11654605-3115036945764080.jpg",
+      "id": 2
+    },
+    {
+      "name": "",
+      "price": "",
+      "color": "",
+      "category": "",
+      "description": "",
+      "image": "",
+      "id": 3
+    },
+    {
+      "name": "",
+      "price": "",
+      "color": "",
+      "category": "",
+      "description": "",
+      "image": "",
+      "id": 4
+    },
+    {
+      "name": "fdsfs",
+      "price": "fdsfsdf",
+      "color": "fsdfsd",
+      "category": "fsdfsd",
+      "description": "fsdfs",
+      "image": "sfds",
+      "id": 5
+    },
+    {
+      "name": "fdsfds",
+      "price": "fdsfsd",
+      "color": "fdsfasd",
+      "category": "fdsfsda",
+      "description": "sdffafd",
+      "image": "dfsdas",
+      "id": 6
+    },
+    {
+      "name": "fdsfdf",
+      "price": "fdsfsd",
+      "color": "",
+      "category": "",
+      "description": "",
+      "image": "",
+      "id": 7
+    },
+    {
+      "name": "fsdfsdfds",
+      "price": "fsdfdsfsdf",
+      "color": "fsdfsdf",
+      "category": "fsdfsd",
+      "description": "fsdfsd",
+      "image": "fsdf",
+      "id": 8
+    }
   ]
 }

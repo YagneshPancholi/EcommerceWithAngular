@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Product } from 'src/app/dataTypes';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'yagu-seller-add-product',
@@ -6,7 +9,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./seller-add-product.component.css'],
 })
 export class SellerAddProductComponent {
-  submit(data: object) {
-    console.warn(data);
+  addProductMessage: string | undefined;
+  @ViewChild('addProduct') addProduct: NgForm | undefined;
+
+  constructor(private productService: ProductService) {}
+
+  addProducts(data: Product) {
+    this.productService.addProduct(data).subscribe((result) => {
+      if (result) {
+        this.addProductMessage = 'Product Added Successfully..';
+        this.addProduct?.reset();
+      } else {
+        this.addProductMessage = 'Product Addition Unsuccessfull..';
+      }
+      setTimeout(() => (this.addProductMessage = undefined), 3000);
+    });
   }
 }
