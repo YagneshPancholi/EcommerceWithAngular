@@ -1,0 +1,12 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'yagu-seller-add-product',
+  templateUrl: './seller-add-product.component.html',
+  styleUrls: ['./seller-add-product.component.css'],
+})
+export class SellerAddProductComponent {
+  submit(data: object) {
+    console.warn(data);
+  }
+}

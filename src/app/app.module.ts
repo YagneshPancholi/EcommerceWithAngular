@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './cmp/seller-home/seller-home.component';
 import { CommonModule } from '@angular/common';
+import { SellerAddProductComponent } from './cmp/seller-add-product/seller-add-product.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CommonModule } from '@angular/common';
     HomeComponent,
     SellerAuthComponent,
     SellerHomeComponent,
+    SellerAddProductComponent,
   ],
   imports: [
     CommonModule,

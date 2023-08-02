@@ -4,6 +4,7 @@ import { HomeComponent } from './cmp/home/home.component';
 import { SellerAuthComponent } from './cmp/seller-auth/seller-auth.component';
 import { SellerHomeComponent } from './cmp/seller-home/seller-home.component';
 import { AuthGuard } from './guard/auth.guard';
+import { SellerAddProductComponent } from './cmp/seller-add-product/seller-add-product.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,11 @@ const routes: Routes = [
   {
     path: 'seller-home',
     component: SellerHomeComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'seller-add-product',
+    component: SellerAddProductComponent,
     canActivate: [AuthGuard],
   },
 ];
