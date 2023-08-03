@@ -32,15 +32,17 @@ export class SellerService {
     }
   }
 
-  sellerLogin(data: Login) {
-    this.URL2 = `http://localhost:3000/seller?email?=${data.emailOrName}&name?=${data.emailOrName}&password=${data.password}`;
+  sellerLogin(data: Login, isEmail: boolean) {
+    if (isEmail) {
+      this.URL2 = `http://localhost:3000/seller?email=${data.emailOrName}&password=${data.password}`;
+    } else {
+      this.URL2 = `http://localhost:3000/seller?name=${data.emailOrName}&password=${data.password}`;
+    }
 
     this.httpClient
       .get(this.URL2, { observe: 'response' })
       .subscribe((result: any) => {
-        if (result.body && result.body.length > 0) {
-          // alert('Login Successfully');
-          console.log(result);
+        if (result && result.body && result.body.length > 0) {
           this.isLoginError.emit(false);
           localStorage.setItem('seller', JSON.stringify(result.body));
           this.router.navigate(['seller-home']);

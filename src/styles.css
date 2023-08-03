@@ -25,3 +25,11 @@ body{
     border: 1px solid blueviolet;
     cursor: pointer;
 }
+.carousel-caption{
+    background-color: #00000044;
+    border-radius: 5px;
+    
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: black;
+}

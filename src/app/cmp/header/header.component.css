@@ -25,14 +25,14 @@
   text-decoration: none;
   color: blueviolet;
 }
-.nav .nav-search {
+.nav-search {
   margin-top: 5px;
   flex: 1;
   display: flex;
   margin-left: 5%;
   margin-right: 5%;
 }
-.nav .nav-search input {
+.nav-search input {
   flex: 1;
   color: blueviolet;
   border: 1px solid blueviolet;
@@ -40,9 +40,9 @@
   border-right: 0px;
   text-align: center;
 }
-.nav .nav-search button {
+.nav-search button {
   color: blueviolet;
   border: 1px solid blueviolet;
-  height: 39px;
+  height: 35px;
   border-left: 0px;
 }

@@ -5,80 +5,47 @@
       "email": "yagnesh@gmail.com",
       "password": "yagu@123",
       "id": 1
+    },
+    {
+      "name": "drashti",
+      "email": "drashti@gmial.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 3
     }
   ],
   "products": [
     {
-      "name": "Iphone 11",
-      "price": "50000",
-      "category": "mobiles",
-      "color": "red",
-      "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/34edebd3-ba85-41b7-ba24-9c14ce7b440c.jpg",
-      "description": "Iphone 11 red with 128 GB Storage",
-      "id": 1
+      "name": "GARMIN FORERUNNER 255",
+      "price": "400000",
+      "color": " SLATE GREY",
+      "category": "Health-Fitness",
+      "description": "Watch For Triathlon",
+      "image": "https://www.garmin.co.in/minisite/forerunner/forerunner-255/images/010-02641-45.png",
+      "id": 3
     },
     {
       "name": "Impact Whey Protein",
       "price": "4199",
       "color": "Red",
       "category": "Food",
-      "description": "Helps To gain muscle",
+      "description": "Helps To Gain Muscle",
       "image": "https://static.thcdn.com/productimg/300/300/11654605-3115036945764080.jpg",
-      "id": 2
-    },
-    {
-      "name": "",
-      "price": "",
-      "color": "",
-      "category": "",
-      "description": "",
-      "image": "",
-      "id": 3
-    },
-    {
-      "name": "",
-      "price": "",
-      "color": "",
-      "category": "",
-      "description": "",
-      "image": "",
       "id": 4
     },
     {
-      "name": "fdsfs",
-      "price": "fdsfsdf",
-      "color": "fsdfsd",
-      "category": "fsdfsd",
-      "description": "fsdfs",
-      "image": "sfds",
+      "name": "Iphone 11",
+      "price": "50000",
+      "color": "Red",
+      "category": "mobile",
+      "description": "Iphone 11 red with 128 GB Storage",
+      "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/34edebd3-ba85-41b7-ba24-9c14ce7b440c.jpg",
       "id": 5
-    },
-    {
-      "name": "fdsfds",
-      "price": "fdsfsd",
-      "color": "fdsfasd",
-      "category": "fdsfsda",
-      "description": "sdffafd",
-      "image": "dfsdas",
-      "id": 6
-    },
-    {
-      "name": "fdsfdf",
-      "price": "fdsfsd",
-      "color": "",
-      "category": "",
-      "description": "",
-      "image": "",
-      "id": 7
-    },
-    {
-      "name": "fsdfsdfds",
-      "price": "fsdfdsfsdf",
-      "color": "fsdfsdf",
-      "category": "fsdfsd",
-      "description": "fsdfsd",
-      "image": "fsdf",
-      "id": 8
     }
   ]
 }

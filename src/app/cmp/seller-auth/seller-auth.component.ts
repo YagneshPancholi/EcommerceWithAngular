@@ -12,7 +12,7 @@ export class SellerAuthComponent {
   showLogin: boolean = false;
   showLoginInfo: string = '';
 
-  constructor(private sellerService: SellerService, private router: Router) {}
+  constructor(private sellerService: SellerService) {}
 
   ngOnInit() {
     this.sellerService.reloadSeller();
@@ -24,7 +24,11 @@ export class SellerAuthComponent {
 
   login(data: Login): void {
     this.showLoginInfo = '';
-    this.sellerService.sellerLogin(data);
+    if (data.emailOrName.includes('@')) {
+      this.sellerService.sellerLogin(data, true);
+    } else {
+      this.sellerService.sellerLogin(data, false);
+    }
     this.sellerService.isLoginError.subscribe((isError) => {
       if (isError) {
         this.showLoginInfo = 'Wrong Credentials!!!';

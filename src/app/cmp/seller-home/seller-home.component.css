@@ -1,0 +1,37 @@
+table{
+    text-align: left;
+    color: blueviolet;
+    border-collapse: collapse;
+    width: 90vw;
+    table-layout: fixed;
+}
+table th, table td{
+    border: 1px solid blueviolet;
+    padding: 10px;
+    min-height: 150px;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+.product-list h1{
+    color: blueviolet;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.delete-p{
+    text-align: center;
+    color: green;
+}
+
+.update-product-button{
+    cursor: pointer;
+}
+.update-div{
+    width: 9rem;
+    margin: 5% 5%;
+}
+.delete-div{
+   width: 9rem;
+   margin: 5% 5%;
+}

@@ -1,1 +1,47 @@
-<p>seller-home works!</p>
+<div class="product-list">
+  <h1>All Products</h1>
+  <p class="delete-p" *ngIf="productDeleteMessage != undefined">
+    {{ productDeleteMessage }}
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productList">
+        <td>
+          <img src="{{ product.image }}" alt="{{ product.description }}" />
+        </td>
+        <td>{{ product.name | titlecase }}</td>
+        <td>{{ product.price | currency : "INR" }}</td>
+        <td>{{ product.color | titlecase }}</td>
+        <td>{{ product.category | titlecase }}</td>
+        <td>{{ product.description | titlecase }}</td>
+        <td>
+          <div
+            (click)="deleteProduct(product.id)"
+            class="delete-div btn btn-danger"
+          >
+            <fa-icon [icon]="deleteIcon"></fa-icon> Delete
+            <!-- <button class="btn btn-danger del-btn">Delete</button> -->
+          </div>
+          <div
+            routerLink="/seller-update-product/{{ product.id }}"
+            class="update-div btn btn-warning"
+          >
+            <fa-icon [icon]="updateIcon"></fa-icon> Update
+            <!-- <button class="btn btn-warning update-product-button">Update </button> -->
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

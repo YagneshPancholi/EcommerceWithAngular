@@ -22,7 +22,7 @@ export class SellerAddProductComponent {
       } else {
         this.addProductMessage = 'Product Addition Unsuccessfull..';
       }
-      setTimeout(() => (this.addProductMessage = undefined), 3000);
+      setTimeout(() => (this.addProductMessage = undefined), 2000);
     });
   }
 }
