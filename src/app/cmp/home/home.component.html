@@ -1,3 +1,4 @@
+<!-- carousal start -->
 <ngb-carousel *ngIf="popularProducts">
   <ng-template *ngFor="let product of popularProducts" ngbSlide>
     <div class="picsum-img-wrapper">
@@ -9,3 +10,34 @@
     </div>
   </ng-template>
 </ngb-carousel>
+<!-- carousal end -->
+
+<!-- trending product start -->
+<div class="product-list-wrapper">
+  <h1>Trending Projects</h1>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let product of trendingProducts">
+      <div class="product-item">
+        <img
+          src="{{ product.image }}"
+          [alt]="product.description | titlecase"
+        />
+        <div class="product-details">
+          <h6 class="name-head">{{ product.name | titlecase }}</h6>
+          <div class="product-price">
+            <h6>{{ product.price }}</h6>
+          </div>
+          <div class="product-color">
+            <h6>{{ product.color }}</h6>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a href="#">View</a>
+          <a href="#">add to cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- trending product end -->
