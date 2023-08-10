@@ -5,9 +5,10 @@
       type="text"
       (keyup)="searchProducts($event)"
       placeholder="e.g. Iphone11"
+      (blur)="hideSearch()"
     />
     <button>Search</button>
-    <ul class="suggested-result">
+    <ul class="suggested-result" *ngIf="searchResult">
       <li *ngFor="let product of searchResult">
         <a href="">{{ product.name }}</a>
       </li>

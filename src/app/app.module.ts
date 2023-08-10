@@ -14,6 +14,8 @@ import { SellerAddProductComponent } from './cmp/seller-add-product/seller-add-p
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SellerUpdateProductComponent } from './cmp/seller-update-product/seller-update-product.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SearchComponent } from './cmp/search/search.component';
+import { FooterComponent } from './cmp/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SellerHomeComponent,
     SellerAddProductComponent,
     SellerUpdateProductComponent,
+    SearchComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,

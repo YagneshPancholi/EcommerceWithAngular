@@ -12,9 +12,7 @@ html, body{
     height: 25vw ;
     /* width: 100vw; */
     width: 100%;
-<<<<<<< HEAD
 
-=======
 }
 .product-list-wrapper{
     margin-top: 80px;
@@ -51,5 +49,4 @@ margin-right: 25px;
     display: flex;
     justify-content:space-evenly;
     padding: 10px;
->>>>>>> 0ec6f4fb8782fc52036c8af25bcafc3165f5821b
 }
