@@ -26,10 +26,13 @@ body{
     cursor: pointer;
 }
 .carousel-caption{
+    height: 5rem;
     background-color: #00000044;
     border-radius: 5px;
-    
+    padding: auto auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 .carousel-control-prev-icon, .carousel-control-next-icon{
     background-color: black;
 }
