@@ -9,11 +9,16 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class HomeComponent {
   popularProducts: undefined | Product[];
+  trendingProducts: undefined | Product[];
+
   constructor(private productService: ProductService) {}
 
   ngOnInit() {
     this.productService.popularProducts().subscribe((result) => {
       this.popularProducts = result;
+    });
+    this.productService.trendingProducts().subscribe((result) => {
+      this.trendingProducts = result;
     });
   }
 }

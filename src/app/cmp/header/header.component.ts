@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from 'src/app/dataTypes';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'yagu-header',
@@ -9,8 +11,9 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   menuType: string = 'default';
   sellerName: string = '';
+  searchResult: undefined | Product[];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private productService: ProductService) {}
 
   ngOnInit() {
     this.router.events.subscribe((result: any) => {
@@ -33,5 +36,14 @@ export class HeaderComponent {
   logout() {
     localStorage.removeItem('seller');
     this.router.navigate(['/']);
+  }
+
+  searchProducts(query: KeyboardEvent) {
+    if (query) {
+      const elmt = query.target as HTMLInputElement;
+      this.productService.searchProducts(elmt.value).subscribe((result) => {
+        this.searchResult = result;
+      });
+    }
   }
 }
