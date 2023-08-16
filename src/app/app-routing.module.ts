@@ -7,6 +7,7 @@ import { AuthGuard } from './guard/auth.guard';
 import { SellerAddProductComponent } from './cmp/seller-add-product/seller-add-product.component';
 import { SellerUpdateProductComponent } from './cmp/seller-update-product/seller-update-product.component';
 import { SearchComponent } from './cmp/search/search.component';
+import { ProductDetailsComponent } from './cmp/product-details/product-details.component';
 
 const routes: Routes = [
   {
@@ -33,9 +34,13 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path:'',
+    path: 'search/:query',
     component: SearchComponent,
-  }
+  },
+  {
+    path: 'details/:productId',
+    component: ProductDetailsComponent,
+  },
 ];
 
 @NgModule({

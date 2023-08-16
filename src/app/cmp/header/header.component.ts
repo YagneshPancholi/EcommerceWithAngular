@@ -9,7 +9,6 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-
   menuType: string = 'default';
   sellerName: string = '';
   searchResult: undefined | Product[];
@@ -43,7 +42,7 @@ export class HeaderComponent {
     if (query) {
       const elmt = query.target as HTMLInputElement;
       this.productService.searchProducts(elmt.value).subscribe((result) => {
-        if(result.length > 4){
+        if (result.length > 4) {
           result.length = 4;
         }
         this.searchResult = result;
@@ -53,6 +52,9 @@ export class HeaderComponent {
 
   hideSearch() {
     this.searchResult = undefined;
-    }
+  }
 
+  submitSearch(query: string) {
+    this.router.navigate([`search/${query}`]);
+  }
 }
