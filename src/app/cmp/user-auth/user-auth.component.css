@@ -12,8 +12,10 @@
     cursor: pointer;
     color: blueviolet;
     text-decoration: none;
-
 }
 .error-p{
     color:red;
-} 
+}
+button:disabled{
+    cursor: not-allowed;
+}

@@ -17,13 +17,37 @@
       "email": "",
       "password": "",
       "id": 3
+    },
+    {
+      "name": "Yagnesh ",
+      "email": "pancholiyagnesh2001@gmail.com",
+      "password": "yagu@123",
+      "id": 4
+    },
+    {
+      "name": "Yagnesh ",
+      "email": "pancholiyagnesh2001@gmail.com",
+      "password": "yagu@123",
+      "id": 5
+    },
+    {
+      "name": "Yagnesh ",
+      "email": "pancholiyagnesh2001@gmail.com",
+      "password": "yagu@1223",
+      "id": 6
+    },
+    {
+      "name": "fdf",
+      "email": "fdfd",
+      "password": "fdf",
+      "id": 7
     }
   ],
   "products": [
     {
       "name": "GARMIN FORERUNNER 255",
       "price": "400000",
-      "color": " SLATE GREY",
+      "color": "Gray",
       "category": "Health-Fitness",
       "description": "Watch For Triathlon",
       "image": "https://www.garmin.co.in/minisite/forerunner/forerunner-255/images/010-02641-45.png",
@@ -46,6 +70,26 @@
       "description": "Iphone 11 red with 128 GB Storage",
       "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/34edebd3-ba85-41b7-ba24-9c14ce7b440c.jpg",
       "id": 5
+    }
+  ],
+  "users": [
+    {
+      "name": "Nimit",
+      "email": "solank@alt.com",
+      "password": "nimit",
+      "id": 1
+    },
+    {
+      "name": "Yagnesh ",
+      "email": "pancholiyagnesh2001@gmail.com",
+      "password": "yagu@123",
+      "id": 2
+    },
+    {
+      "name": "dinesh",
+      "email": "dinesh@gmail.com",
+      "password": "123",
+      "id": 3
     }
   ]
 }

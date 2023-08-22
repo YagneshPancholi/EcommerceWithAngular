@@ -1,0 +1,82 @@
+<div class="user-auth">
+  <!-- SignUp -->
+  <div *ngIf="!showLogin" class="signup">
+    <h1>User SignUp</h1>
+    <form
+      #userSingUp="ngForm"
+      (ngSubmit)="signUp(userSingUp.value)"
+      class="common-form"
+    >
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter Name"
+        ngModel
+        name="name"
+      />
+      <input
+        type="email"
+        class="form-input"
+        placeholder="Enter Email"
+        ngModel
+        name="email"
+      />
+      <input
+        type="password"
+        class="form-input"
+        placeholder="Password"
+        ngModel
+        name="password"
+      />
+      <button class="form-button">SignUp</button>
+      <a class="auth-toggle-link" (click)="LoginOrSignUp()"
+        >Already Have an Account? Click to Login</a
+      >
+    </form>
+  </div>
+
+  <!-- Login -->
+  <div *ngIf="showLogin" class="login">
+    <h1>User Login</h1>
+    <p class="error-p" *ngIf="showLoginInfo">{{ showLoginInfo }}</p>
+    <form
+      #userLogin="ngForm"
+      (ngSubmit)="login(userLogin.value)"
+      class="common-form"
+    >
+      <input
+        type="email"
+        class="form-input"
+        placeholder="Email or Name"
+        ngModel
+        name="emailOrName"
+        #emailOrName="ngModel"
+        required
+      />
+      <p class="invalid-input">
+        <span *ngIf="emailOrName.invalid && emailOrName.touched"
+          >Please Enter Valid Details</span
+        >
+      </p>
+      <input
+        type="password"
+        class="form-input"
+        placeholder="Password"
+        ngModel
+        name="password"
+        #password="ngModel"
+        required
+        minlength="5"
+      />
+      <p class="invalid-input">
+        <span *ngIf="password.invalid && password.touched"
+          >Password Should Be Minimum 5 Character Long</span
+        >
+      </p>
+      <button [disabled]="userLogin.invalid" class="form-button">Login</button>
+      <a class="auth-toggle-link" (click)="LoginOrSignUp()"
+        >Don't Have an Account? Click to SignUp</a
+      >
+    </form>
+  </div>
+</div>

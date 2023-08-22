@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { Login, SignUp } from 'src/app/dataTypes';
 import { SellerService } from 'src/app/services/seller.service';
 
@@ -32,8 +31,6 @@ export class SellerAuthComponent {
     this.sellerService.isLoginError.subscribe((isError) => {
       if (isError) {
         this.showLoginInfo = 'Wrong Credentials!!!';
-      } else {
-        this.showLoginInfo = 'Login Success';
       }
     });
   }

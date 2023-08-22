@@ -11,6 +11,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class HeaderComponent {
   menuType: string = 'default';
   sellerName: string = '';
+  userName: string = '';
   searchResult: undefined | Product[];
 
   constructor(private router: Router, private productService: ProductService) {}
@@ -26,6 +27,14 @@ export class HeaderComponent {
             let sellerData = sellerStorage && JSON.parse(sellerStorage)[0];
             this.sellerName = sellerData.name;
           }
+        } else if (localStorage.getItem('user')) {
+          // console.warn('in user area');
+          this.menuType = 'user';
+          if (localStorage.getItem('user')) {
+            const userStorage = localStorage.getItem('user');
+            let userData = userStorage && JSON.parse(userStorage)[0];
+            this.userName = userData.name;
+          }
         } else {
           // console.warn('outside of seller');
           this.menuType = 'default';
@@ -33,8 +42,13 @@ export class HeaderComponent {
       }
     });
   }
-  logout() {
-    localStorage.removeItem('seller');
+  logout(data: string) {
+    if (data == 'seller') {
+      localStorage.removeItem('seller');
+    }
+    if (data == 'user') {
+      localStorage.removeItem('user');
+    }
     this.router.navigate(['/']);
   }
 
@@ -56,5 +70,8 @@ export class HeaderComponent {
 
   submitSearch(query: string) {
     this.router.navigate([`search/${query}`]);
+  }
+  redirectToProductDetails(id: number) {
+    this.router.navigate([`/details/${id}`]);
   }
 }
