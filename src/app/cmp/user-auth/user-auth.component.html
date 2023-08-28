@@ -12,23 +12,49 @@
         class="form-input"
         placeholder="Enter Name"
         ngModel
+        #name="ngModel"
+        required
+        minlength="2"
         name="name"
       />
+      <p class="invalid-input">
+        <span *ngIf="name.invalid && name.touched"
+          >Name length should be atleast 2</span
+        >
+      </p>
       <input
         type="email"
         class="form-input"
         placeholder="Enter Email"
         ngModel
         name="email"
+        #email="ngModel"
+        required
+        email
       />
+      <p class="invalid-input">
+        <span *ngIf="email.invalid && email.touched"
+          >Please Enter Email in Correct Format</span
+        >
+      </p>
       <input
         type="password"
         class="form-input"
         placeholder="Password"
         ngModel
         name="password"
+        #password="ngModel"
+        required
+        minlength="5"
       />
-      <button class="form-button">SignUp</button>
+      <p class="invalid-input">
+        <span *ngIf="password.invalid && password.touched"
+          >Password length should be atleast 5</span
+        >
+      </p>
+      <button class="form-button" [disabled]="userSingUp.invalid">
+        SignUp
+      </button>
       <a class="auth-toggle-link" (click)="LoginOrSignUp()"
         >Already Have an Account? Click to Login</a
       >
@@ -49,31 +75,17 @@
         class="form-input"
         placeholder="Email or Name"
         ngModel
-        name="emailOrName"
-        #emailOrName="ngModel"
         required
       />
-      <p class="invalid-input">
-        <span *ngIf="emailOrName.invalid && emailOrName.touched"
-          >Please Enter Valid Details</span
-        >
-      </p>
       <input
         type="password"
         class="form-input"
         placeholder="Password"
         ngModel
         name="password"
-        #password="ngModel"
         required
-        minlength="5"
       />
-      <p class="invalid-input">
-        <span *ngIf="password.invalid && password.touched"
-          >Password Should Be Minimum 5 Character Long</span
-        >
-      </p>
-      <button [disabled]="userLogin.invalid" class="form-button">Login</button>
+      <button class="form-button">Login</button>
       <a class="auth-toggle-link" (click)="LoginOrSignUp()"
         >Don't Have an Account? Click to SignUp</a
       >
