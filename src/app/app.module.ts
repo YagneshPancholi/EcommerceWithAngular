@@ -18,6 +18,9 @@ import { SearchComponent } from './cmp/search/search.component';
 import { FooterComponent } from './cmp/footer/footer.component';
 import { ProductDetailsComponent } from './cmp/product-details/product-details.component';
 import { UserAuthComponent } from './cmp/user-auth/user-auth.component';
+import { CartPageComponent } from './cmp/cart-page/cart-page.component';
+import { MyOrdersComponent } from './cmp/my-orders/my-orders.component';
+import { CheckoutComponent } from './cmp/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { UserAuthComponent } from './cmp/user-auth/user-auth.component';
     FooterComponent,
     ProductDetailsComponent,
     UserAuthComponent,
+    CartPageComponent,
+    CheckoutComponent,
+    MyOrdersComponent,
   ],
   imports: [
     CommonModule,

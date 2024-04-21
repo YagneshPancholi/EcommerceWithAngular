@@ -18,23 +18,23 @@
     <tbody>
       <tr *ngFor="let product of productList">
         <td>
-          <img src="{{ product.image }}" alt="{{ product.description }}" />
+          <img src="{{ product.Image }}" alt="{{ product.Description }}" />
         </td>
-        <td>{{ product.name | titlecase }}</td>
-        <td>{{ product.price | currency : "INR" }}</td>
-        <td>{{ product.color | titlecase }}</td>
-        <td>{{ product.category | titlecase }}</td>
-        <td>{{ product.description | titlecase }}</td>
+        <td>{{ product.Name | titlecase }}</td>
+        <td>{{ product.Price | currency : "INR" }}</td>
+        <td>{{ product.Color | titlecase }}</td>
+        <td>{{ product.Category | titlecase }}</td>
+        <td>{{ product.Description | titlecase }}</td>
         <td>
           <div
-            (click)="deleteProduct(product.id)"
+            (click)="deleteProduct(product.Id)"
             class="delete-div btn btn-danger"
           >
             <fa-icon [icon]="deleteIcon"></fa-icon> Delete
             <!-- <button class="btn btn-danger del-btn">Delete</button> -->
           </div>
           <div
-            routerLink="/seller-update-product/{{ product.id }}"
+            routerLink="/seller-update-product/{{ product.Id }}"
             class="update-div btn btn-warning"
           >
             <fa-icon [icon]="updateIcon"></fa-icon> Update

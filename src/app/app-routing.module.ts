@@ -9,6 +9,9 @@ import { SellerUpdateProductComponent } from './cmp/seller-update-product/seller
 import { SearchComponent } from './cmp/search/search.component';
 import { ProductDetailsComponent } from './cmp/product-details/product-details.component';
 import { UserAuthComponent } from './cmp/user-auth/user-auth.component';
+import { CartPageComponent } from './cmp/cart-page/cart-page.component';
+import { CheckoutComponent } from './cmp/checkout/checkout.component';
+import { MyOrdersComponent } from './cmp/my-orders/my-orders.component';
 
 const routes: Routes = [
   {
@@ -46,18 +49,18 @@ const routes: Routes = [
     path: 'user-auth',
     component: UserAuthComponent,
   },
-  // {
-  //   component: CartPageComponent,
-  //   path: 'cart-page',
-  // },
-  // {
-  //   component: CheckoutComponent,
-  //   path: 'checkout',
-  // },
-  // {
-  //   component: MyOrdersComponent,
-  //   path: 'my-orders',
-  // },
+  {
+    component: CartPageComponent,
+    path: 'cart-page',
+  },
+  {
+    component: CheckoutComponent,
+    path: 'checkout',
+  },
+  {
+    component: MyOrdersComponent,
+    path: 'my-orders',
+  },
 ];
 
 @NgModule({

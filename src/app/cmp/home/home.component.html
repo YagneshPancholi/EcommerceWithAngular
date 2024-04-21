@@ -2,17 +2,17 @@
 <ngb-carousel *ngIf="popularProducts">
   <ng-template *ngFor="let product of popularProducts" ngbSlide>
     <div class="picsum-img-wrapper">
-      <a routerLink="/details/{{ product.id }}">
+      <a routerLink="/details/{{ product.Id }}">
         <img
           class="product-img"
-          [src]="product.image"
+          [src]="product.Image"
           alt="Random first slide"
         />
       </a>
     </div>
     <div class="carousel-caption">
-      <h3>{{ product.name | titlecase }}</h3>
-      <p>{{ product.description | titlecase }}</p>
+      <h3>{{ product.Name | titlecase }}</h3>
+      <p>{{ product.Description | titlecase }}</p>
     </div>
   </ng-template>
 </ngb-carousel>
@@ -25,20 +25,20 @@
     <div class="col-sm-3" *ngFor="let product of trendingProducts">
       <div class="product-item">
         <img
-          src="{{ product.image }}"
-          [alt]="product.description | titlecase"
+          src="{{ product.Image }}"
+          [alt]="product.Description | titlecase"
         />
         <div class="product-details">
-          <h6 class="name-head">{{ product.name | titlecase }}</h6>
+          <h6 class="name-head">{{ product.Name | titlecase }}</h6>
           <div class="product-price">
-            <h6>{{ product.price }}</h6>
+            <h6>{{ product.Price }}</h6>
           </div>
           <div class="product-color">
-            <h6>{{ product.color }}</h6>
+            <h6>{{ product.Color }}</h6>
           </div>
         </div>
         <div class="product-footer">
-          <a routerLink="/details/{{ product.id }}">View</a>
+          <a routerLink="/details/{{ product.Id }}">View</a>
           <a href="#">add to cart</a>
         </div>
       </div>

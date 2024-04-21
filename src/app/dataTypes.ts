@@ -1,36 +1,36 @@
 export interface SignUp {
-  name: string;
-  email: string;
-  password: string;
+  Name: string;
+  Email: string;
+  Password: string;
 }
 
 export interface Login {
-  emailOrName: string;
-  password: string;
+  Name: string;
+  Password: string;
 }
 
 export interface Product {
-  id: number;
-  name: string;
-  price: number;
-  category: string;
-  color: string;
-  description: string;
-  image: string;
-  quantity: undefined | number;
+  Id: number;
+  Name: string;
+  Price: number;
+  Category: string;
+  Color: string;
+  Description: string;
+  Image: string;
+  Quantity: undefined | number;
 }
 
 export interface Cart {
-  name: string;
-  price: number;
-  category: string;
-  color: string;
-  description: string;
-  image: string;
-  quantity: undefined | number;
-  id: number | undefined;
-  userId: number;
-  productId: number;
+  Name: string;
+  Price: number;
+  Category: string;
+  Color: string;
+  Description: string;
+  Image: string;
+  Quantity: undefined | number;
+  Id: number | undefined;
+  UserId: number;
+  ProductId: number;
 }
 export interface User {
   name: string;

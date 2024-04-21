@@ -85,39 +85,6 @@
   ],
   "cart": [
     {
-      "name": "GARMIN FORERUNNER 255",
-      "price": "400000",
-      "color": "Gray",
-      "category": "Health-Fitness",
-      "description": "Watch For Triathlon",
-      "image": "https://www.garmin.co.in/minisite/forerunner/forerunner-255/images/010-02641-45.png",
-      "quantity": 1,
-      "productId": 3,
-      "id": 1
-    },
-    {
-      "name": "Iphone 11",
-      "price": "50000",
-      "color": "Red",
-      "category": "mobile",
-      "description": "Iphone 11 red with 128 GB Storage",
-      "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/34edebd3-ba85-41b7-ba24-9c14ce7b440c.jpg",
-      "quantity": 1,
-      "productId": 5,
-      "id": 2
-    },
-    {
-      "name": "GARMIN FORERUNNER 255",
-      "price": "400000",
-      "color": "Gray",
-      "category": "Health-Fitness",
-      "description": "Watch For Triathlon",
-      "image": "https://www.garmin.co.in/minisite/forerunner/forerunner-255/images/010-02641-45.png",
-      "quantity": 1,
-      "productId": 3,
-      "id": 3
-    },
-    {
       "name": "Impact Whey Protein",
       "price": "4199",
       "color": "Red",
@@ -126,7 +93,7 @@
       "image": "https://static.thcdn.com/productimg/300/300/11654605-3115036945764080.jpg",
       "quantity": 1,
       "productId": 4,
-      "id": 4
+      "id": 1
     },
     {
       "name": "GARMIN FORERUNNER 255",
@@ -137,7 +104,7 @@
       "image": "https://www.garmin.co.in/minisite/forerunner/forerunner-255/images/010-02641-45.png",
       "quantity": 1,
       "productId": 3,
-      "id": 5
+      "id": 2
     },
     {
       "name": "Iphone 11",
@@ -148,7 +115,62 @@
       "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/34edebd3-ba85-41b7-ba24-9c14ce7b440c.jpg",
       "quantity": 1,
       "productId": 5,
+      "id": 3
+    },
+    {
+      "name": "Iphone 11",
+      "price": "50000",
+      "color": "Red",
+      "category": "mobile",
+      "description": "Iphone 11 red with 128 GB Storage",
+      "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/34edebd3-ba85-41b7-ba24-9c14ce7b440c.jpg",
+      "quantity": 1,
+      "productId": 5,
+      "id": 4
+    },
+    {
+      "name": "Iphone 11",
+      "price": "50000",
+      "color": "Red",
+      "category": "mobile",
+      "description": "Iphone 11 red with 128 GB Storage",
+      "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/34edebd3-ba85-41b7-ba24-9c14ce7b440c.jpg",
+      "quantity": 1,
+      "productId": 5,
+      "id": 5
+    },
+    {
+      "name": "GARMIN FORERUNNER 255",
+      "price": "400000",
+      "color": "Gray",
+      "category": "Health-Fitness",
+      "description": "Watch For Triathlon",
+      "image": "https://www.garmin.co.in/minisite/forerunner/forerunner-255/images/010-02641-45.png",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 3,
       "id": 6
+    },
+    {
+      "name": "Iphone 11",
+      "price": "50000",
+      "color": "Red",
+      "category": "mobile",
+      "description": "Iphone 11 red with 128 GB Storage",
+      "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/34edebd3-ba85-41b7-ba24-9c14ce7b440c.jpg",
+      "quantity": 1,
+      "productId": 5,
+      "userId": 3,
+      "id": 7
+    }
+  ],
+  "orders": [
+    {
+      "email": "",
+      "address": "",
+      "contact": "",
+      "totalPrice": 100,
+      "id": 1
     }
   ]
 }

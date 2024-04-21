@@ -1,5 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Route, Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 import { Cart, Login, Product, SignUp, User } from 'src/app/dataTypes';
 import { ProductService } from 'src/app/services/product.service';
 import { UserService } from 'src/app/services/user.service';
@@ -13,7 +15,8 @@ export class UserAuthComponent {
   @ViewChild('userLogin') userLogin: NgForm | undefined;
   constructor(
     private userService: UserService,
-    private productService: ProductService
+    private productService: ProductService,
+    private router: Router
   ) {}
   ngOnInit() {
     this.userService.reloadUser();
@@ -25,15 +28,30 @@ export class UserAuthComponent {
     this.showLogin = !this.showLogin;
   }
   signUp(data: SignUp) {
-    this.userService.userSignUp(data);
+    this.userService.userSignUp(data).subscribe((result) => {
+      if (result) {
+        this.router.navigate(['/']);
+      }
+    });
+    this.router.navigate(['/']);
   }
   login(data: Login) {
-    if (data.emailOrName.includes('@')) {
-      this.userService.userLogin(data, true);
-    } else {
-      this.userService.userLogin(data, false);
-    }
-    this.userService.isLoginError.subscribe((result) => {
+    this.userService.userLogin(data, false).subscribe((result: string) => {
+      debugger;
+      if (result) {
+        localStorage.setItem('user', result);
+        this.userService.isLoginError.emit(false);
+      } else {
+        this.userService.isLoginError.emit(true);
+      }
+    });
+    this.router.navigate(['/']);
+    // if (data.name.includes('@')) {
+    //   this.userService.userLogin(data, true);
+    // } else {
+    //   this.userService.userLogin(data, false);
+    // }
+    this.userService.isLoginError.subscribe((result: any) => {
       if (result) {
         this.showLoginInfo = 'Wrong Credentials';
       } else {
@@ -52,15 +70,18 @@ export class UserAuthComponent {
     let data = localStorage.getItem('localCart');
     if (data) {
       let user = localStorage.getItem('user');
-      let userId = user && JSON.parse(user).id;
+      if (user) {
+        var tempData: User[] = JSON.parse(user);
+        var userId = tempData[0].id;
+      }
       let cartDataList: Product[] = JSON.parse(data);
       cartDataList.forEach((product: Product, index) => {
         let cartData: Cart = {
           ...product,
-          productId: product.id,
-          userId,
+          ProductId: product.Id,
+          UserId: userId,
         };
-        delete cartData.id;
+        delete cartData.Id;
         setTimeout(() => {
           this.productService.addToCart(cartData).subscribe(() => {
             console.warn('prduct added to DB');

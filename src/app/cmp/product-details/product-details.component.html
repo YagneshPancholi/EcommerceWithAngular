@@ -2,23 +2,23 @@
   <div class="col-sm-6">
     <img
       class="product-image"
-      src="{{ productData.image }}"
-      alt="{{ productData.description }}"
+      src="{{ productData.Image }}"
+      alt="{{ productData.Description }}"
     />
   </div>
   <div class="col-sm-6">
     <div class="details">
-      <h1>{{ productData.name }}</h1>
-      <h3>Price : {{ productData.price | currency : "INR" }}</h3>
+      <h1>{{ productData.Name }}</h1>
+      <h3>Price : {{ productData.Price | currency : "INR" }}</h3>
       <div>
         <h3>Color:</h3>
         <h5
-          [style.backgroundColor]="productData.color"
+          [style.backgroundColor]="productData.Color"
           class="product-color"
         ></h5>
       </div>
-      <h6>{{ productData.category | titlecase }}</h6>
-      <h6>{{ productData.description | titlecase }}</h6>
+      <h6>{{ productData.Category | titlecase }}</h6>
+      <h6>{{ productData.Description | titlecase }}</h6>
       <button
         *ngIf="!removeCart"
         class="form-button form-button-extra"
@@ -29,7 +29,7 @@
       <button
         *ngIf="removeCart"
         class="form-button form-button-extra"
-        (click)="RemoveToCart(productData.id)"
+        (click)="RemoveToCart(productData.Id)"
       >
         Remove To Cart
       </button>

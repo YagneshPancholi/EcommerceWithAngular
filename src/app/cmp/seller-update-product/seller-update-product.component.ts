@@ -30,7 +30,7 @@ export class SellerUpdateProductComponent {
 
   UpdateThisProduct(data: Product) {
     if (this.oldData) {
-      data.id = this.oldData.id;
+      data.Id = this.oldData.Id;
     }
     this.productService.updateProduct(data).subscribe((result) => {
       console.warn(result);

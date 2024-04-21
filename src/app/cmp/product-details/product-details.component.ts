@@ -28,7 +28,7 @@ export class ProductDetailsComponent {
     let cartData = localStorage.getItem('localCart');
     if (cartData && productId) {
       let items = JSON.parse(cartData);
-      items = items.filter((item: Product) => item.id.toString() == productId);
+      items = items.filter((item: Product) => item.Id.toString() == productId);
       if (items.length && items.length > 0) {
         this.removeCart = true;
       } else {
@@ -46,7 +46,7 @@ export class ProductDetailsComponent {
   }
   AddToCart() {
     if (this.productData) {
-      this.productData.quantity = this.productQuantity;
+      this.productData.Quantity = this.productQuantity;
       console.log(this.productData);
       if (!localStorage.getItem('user')) {
         this.productService.localAddToCart(this.productData);
@@ -57,10 +57,10 @@ export class ProductDetailsComponent {
         let userId = user && JSON.parse(user).id;
         let cartData: Cart = {
           ...this.productData,
-          userId,
-          productId: this.productData.id,
+          UserId: userId,
+          ProductId: this.productData.Id,
         };
-        delete cartData.id;
+        delete cartData.Id;
         this.productService.addToCart(cartData).subscribe((data) => {
           if (data) {
             alert('Product is added to cart');
