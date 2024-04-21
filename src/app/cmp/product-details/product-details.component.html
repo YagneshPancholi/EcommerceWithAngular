@@ -19,7 +19,20 @@
       </div>
       <h6>{{ productData.category | titlecase }}</h6>
       <h6>{{ productData.description | titlecase }}</h6>
-      <button class="form-button form-button-extra">Add To Cart</button>
+      <button
+        *ngIf="!removeCart"
+        class="form-button form-button-extra"
+        (click)="AddToCart()"
+      >
+        Add To Cart
+      </button>
+      <button
+        *ngIf="removeCart"
+        class="form-button form-button-extra"
+        (click)="RemoveToCart(productData.id)"
+      >
+        Remove To Cart
+      </button>
       <button class="form-button form-button-extra">Buy Now</button>
       <div class="quantity-group">
         <button (click)="handleQuantity('min')">-</button>

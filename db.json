@@ -1,58 +1,16 @@
 {
   "seller": [
     {
-      "name": "yagnesh",
-      "email": "yagnesh@gmail.com",
-      "password": "yagu@123",
-      "id": 1
-    },
-    {
-      "name": "drashti",
-      "email": "drashti@gmial.com",
-      "password": "1234",
-      "id": 2
-    },
-    {
-      "name": "",
-      "email": "",
-      "password": "",
-      "id": 3
-    },
-    {
-      "name": "Yagnesh ",
+      "name": "Yagnesh",
       "email": "pancholiyagnesh2001@gmail.com",
       "password": "yagu@123",
       "id": 4
     },
     {
-      "name": "Yagnesh ",
-      "email": "pancholiyagnesh2001@gmail.com",
-      "password": "yagu@123",
-      "id": 5
-    },
-    {
-      "name": "Yagnesh ",
-      "email": "pancholiyagnesh2001@gmail.com",
-      "password": "yagu@1223",
-      "id": 6
-    },
-    {
-      "name": "fdf",
-      "email": "fdfd",
-      "password": "fdf",
-      "id": 7
-    },
-    {
-      "name": "ff",
-      "email": "ff",
-      "password": "ff",
-      "id": 8
-    },
-    {
-      "name": "",
-      "email": "",
-      "password": "",
-      "id": 9
+      "name": "nilungseller",
+      "email": "abc@gmail.com",
+      "password": "abcd",
+      "id": 10
     }
   ],
   "products": [
@@ -82,6 +40,15 @@
       "description": "Iphone 11 red with 128 GB Storage",
       "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/34edebd3-ba85-41b7-ba24-9c14ce7b440c.jpg",
       "id": 5
+    },
+    {
+      "name": "Button",
+      "price": "12",
+      "color": "blue",
+      "category": "Clothes",
+      "description": "button for shirt",
+      "image": "data:image/jpeg;base64,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",
+      "id": 6
     }
   ],
   "users": [
@@ -92,7 +59,7 @@
       "id": 1
     },
     {
-      "name": "Yagnesh ",
+      "name": "Yagnesh",
       "email": "pancholiyagnesh2001@gmail.com",
       "password": "yagu@123",
       "id": 2
@@ -104,16 +71,84 @@
       "id": 3
     },
     {
-      "name": "ff",
-      "email": "ff@ff",
-      "password": "ffffff",
+      "name": "nilung",
+      "email": "abc@gmail.com",
+      "password": "abc1233",
+      "id": 6
+    },
+    {
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "testbro",
+      "id": 7
+    }
+  ],
+  "cart": [
+    {
+      "name": "GARMIN FORERUNNER 255",
+      "price": "400000",
+      "color": "Gray",
+      "category": "Health-Fitness",
+      "description": "Watch For Triathlon",
+      "image": "https://www.garmin.co.in/minisite/forerunner/forerunner-255/images/010-02641-45.png",
+      "quantity": 1,
+      "productId": 3,
+      "id": 1
+    },
+    {
+      "name": "Iphone 11",
+      "price": "50000",
+      "color": "Red",
+      "category": "mobile",
+      "description": "Iphone 11 red with 128 GB Storage",
+      "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/34edebd3-ba85-41b7-ba24-9c14ce7b440c.jpg",
+      "quantity": 1,
+      "productId": 5,
+      "id": 2
+    },
+    {
+      "name": "GARMIN FORERUNNER 255",
+      "price": "400000",
+      "color": "Gray",
+      "category": "Health-Fitness",
+      "description": "Watch For Triathlon",
+      "image": "https://www.garmin.co.in/minisite/forerunner/forerunner-255/images/010-02641-45.png",
+      "quantity": 1,
+      "productId": 3,
+      "id": 3
+    },
+    {
+      "name": "Impact Whey Protein",
+      "price": "4199",
+      "color": "Red",
+      "category": "Food",
+      "description": "Helps To Gain Muscle",
+      "image": "https://static.thcdn.com/productimg/300/300/11654605-3115036945764080.jpg",
+      "quantity": 1,
+      "productId": 4,
       "id": 4
     },
     {
-      "name": "fffff",
-      "email": "fffff@ffff",
-      "password": "fffffff",
+      "name": "GARMIN FORERUNNER 255",
+      "price": "400000",
+      "color": "Gray",
+      "category": "Health-Fitness",
+      "description": "Watch For Triathlon",
+      "image": "https://www.garmin.co.in/minisite/forerunner/forerunner-255/images/010-02641-45.png",
+      "quantity": 1,
+      "productId": 3,
       "id": 5
+    },
+    {
+      "name": "Iphone 11",
+      "price": "50000",
+      "color": "Red",
+      "category": "mobile",
+      "description": "Iphone 11 red with 128 GB Storage",
+      "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/34edebd3-ba85-41b7-ba24-9c14ce7b440c.jpg",
+      "quantity": 1,
+      "productId": 5,
+      "id": 6
     }
   ]
 }

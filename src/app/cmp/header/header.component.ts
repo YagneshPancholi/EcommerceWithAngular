@@ -13,7 +13,7 @@ export class HeaderComponent {
   sellerName: string = '';
   userName: string = '';
   searchResult: undefined | Product[];
-
+  cartItems: number = 0;
   constructor(private router: Router, private productService: ProductService) {}
 
   ngOnInit() {
@@ -40,6 +40,13 @@ export class HeaderComponent {
           this.menuType = 'default';
         }
       }
+    });
+    let cartData = localStorage.getItem('localCart');
+    if (cartData) {
+      this.cartItems = JSON.parse(cartData).length;
+    }
+    this.productService.OnAddToCart.subscribe((result) => {
+      this.cartItems = result.length;
     });
   }
   logout(data: string) {

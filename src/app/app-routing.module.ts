@@ -46,6 +46,18 @@ const routes: Routes = [
     path: 'user-auth',
     component: UserAuthComponent,
   },
+  // {
+  //   component: CartPageComponent,
+  //   path: 'cart-page',
+  // },
+  // {
+  //   component: CheckoutComponent,
+  //   path: 'checkout',
+  // },
+  // {
+  //   component: MyOrdersComponent,
+  //   path: 'my-orders',
+  // },
 ];
 
 @NgModule({
